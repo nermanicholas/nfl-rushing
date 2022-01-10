@@ -21,4 +21,34 @@ Attribute                   Type          Additional Info
 
 class Rushing < ApplicationRecord
   belongs_to :player
+
+  COLUMN_NAME_TO_ATTRIBUTE_MAP = {
+    "Player" => :player_name,
+    "Team" => :team_name,
+    "Pos" => :player_position,
+    "Att" => :attempts,
+    "Att/G" => :attempts_per_game,
+    "Yds" => :yards,
+    "Avg" => :yards_per_attempt,
+    "Yds/G" => :yards_per_game,
+    "TD" => :touchdowns,
+    "Lng" => :longest,
+    "1st" => :first_downs,
+    "1st%" => :first_down_percentage,
+    "20+" => :twenty_plus_yards,
+    "40+" => :forty_plus_yards,
+    "FUM" => :fumbles
+  }
+
+  def player_name
+    player.name
+  end
+
+  def team_name
+    player.team.abbreviation
+  end
+
+  def player_position
+    player.position.abbreviation
+  end
 end
