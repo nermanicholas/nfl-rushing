@@ -22,7 +22,7 @@ Attribute                   Type          Additional Info
 class Rushing < ApplicationRecord
   belongs_to :player
 
-  COLUMN_NAME_TO_ATTRIBUTE_MAP = {
+  LABEL_TO_COLUMN_MAP = {
     "Player" => :player_name,
     "Team" => :team_name,
     "Pos" => :player_position,

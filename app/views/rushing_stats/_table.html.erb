@@ -1,32 +1,30 @@
-<%= turbo_frame_tag "rushings" do %>
-  <table class="table">
-    <tr>
-      <% @labels_to_columns.each do |label, column| %>
-        <% if sortable_columns.include?(column) %>
-          <th><%= sort_link(column: column, label: label) %></th>
-        <% else %>
-          <th><%= label %></th>
-        <% end %>
+<table class="table">
+  <tr>
+    <% @labels_to_columns.each do |label, column| %>
+      <% if sortable_columns.include?(column) %>
+        <th><%= sort_link(column: column, label: label) %></th>
+      <% else %>
+        <th><%= label %></th>
       <% end %>
-    </tr>
-    <% @rows.each do |row| %>
-      <tr>
-        <td><%= row.player_name %></td>
-        <td><%= row.team_name %></td>
-        <td><%= row.player_position %></td>
-        <td><%= row.attempts_per_game %></td>
-        <td><%= row.attempts %></td>
-        <td><%= row.yards %></td>
-        <td><%= row.yards_per_attempt %></td>
-        <td><%= row.yards_per_game %></td>
-        <td><%= row.touchdowns %></td>
-        <td><%= row.longest %></td>
-        <td><%= row.first_downs %></td>
-        <td><%= row.first_down_percentage %></td>
-        <td><%= row.twenty_plus_yards %></td>
-        <td><%= row.forty_plus_yards %></td>
-        <td><%= row.fumbles %></td>
-      </tr>
     <% end %>
-  </table>
-<% end %>
+  </tr>
+  <% @rows.each do |row| %>
+    <tr>
+      <td><%= row.player_name %></td>
+      <td><%= row.team_name %></td>
+      <td><%= row.player_position %></td>
+      <td><%= row.attempts_per_game %></td>
+      <td><%= row.attempts %></td>
+      <td><%= row.yards %></td>
+      <td><%= row.yards_per_attempt %></td>
+      <td><%= row.yards_per_game %></td>
+      <td><%= row.touchdowns %></td>
+      <td><%= row.longest %></td>
+      <td><%= row.first_downs %></td>
+      <td><%= row.first_down_percentage %></td>
+      <td><%= row.twenty_plus_yards %></td>
+      <td><%= row.forty_plus_yards %></td>
+      <td><%= row.fumbles %></td>
+    </tr>
+  <% end %>
+</table>

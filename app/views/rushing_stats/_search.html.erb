@@ -1,1 +1,6 @@
-SEARCH GOES HERE
+<div>
+  <%= form_with url: root_path, method: :get do |form| %>
+    <%= form.text_field :name, placeholder: "Search by Player Name", value: params[:name] %>
+    <%= form.button "Search" %>
+  <% end %>
+</div>
