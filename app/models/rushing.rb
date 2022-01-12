@@ -38,17 +38,7 @@ class Rushing < ApplicationRecord
     "20+" => :twenty_plus_yards,
     "40+" => :forty_plus_yards,
     "FUM" => :fumbles
-  }
+}.freeze
 
-  def player_name
-    player.name
-  end
-
-  def team_name
-    player.team.abbreviation
-  end
-
-  def player_position
-    player.position.abbreviation
-  end
+  SORTABLE_COLUMNS = [ :yards, :longest, :touchdowns ].freeze
 end
