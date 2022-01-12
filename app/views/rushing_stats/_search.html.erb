@@ -2,5 +2,6 @@
   <%= form_with url: root_path, method: :get do |form| %>
     <%= form.text_field :name, placeholder: "Search by Player Name", value: params[:name] %>
     <%= form.button "Search" %>
+    <%= link_to "Download CSV", root_path(params.permit(permitted_params).merge(format: :csv)) %>
   <% end %>
 </div>
