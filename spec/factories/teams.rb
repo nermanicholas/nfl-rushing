@@ -17,10 +17,5 @@ FactoryBot.define do
       name { "New York Jets" }
       abbreviation { "NYJ" }
     end
-
-    trait :NE do
-      name { "New England Patriots" }
-      abbreviation { "NE" }
-    end
   end
 end

@@ -17,10 +17,5 @@ FactoryBot.define do
       name { "Running Back" }
       abbreviation { "RB" }
     end
-
-    trait :FS do
-      name { "Free Safety" }
-      abbreviation { "FS" }
-    end
   end
 end

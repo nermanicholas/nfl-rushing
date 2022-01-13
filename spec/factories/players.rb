@@ -21,11 +21,5 @@ FactoryBot.define do
       team factory: :NYJ
       position factory: :RB
     end
-
-    trait :eren_yeager do
-      name { "Eren Yeager" }
-      team factory: :NE
-      position factory: :FS
-    end
   end
 end

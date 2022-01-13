@@ -44,9 +44,4 @@ namespace :seed_db do
       )
     end
   end
-
-  desc "Populates DB with 10,000 records that are randomly generated"
-  task ten_thousand_records: :environment do
-    # TODO: generate 10k records
-  end
 end

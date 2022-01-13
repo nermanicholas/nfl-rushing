@@ -15,6 +15,7 @@ class RushingStatsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.json { render json: @rows.to_json(:except => [:created_at, :updated_at]) }
       format.csv {
         send_data RushingStatsCsvFormatter.build_csv(@labels_to_columns, @rows), filename: "rushing_stats.csv"
       }
